@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer components {
+    .button{
+        padding: 10px 20px;
+        color: white;
+        background-color: black;
+        text-align: center;
+        width: fit-content;
+        border-radius: 20px;
+    }
     .semi-circle-top{
         height: 50px;
         width: 100px;
@@ -26,6 +34,11 @@
     .circle-small{
         height: 100px;
         width: 100px;
+        border-radius: 150px;
+    }
+    .circle-xs{
+        height: 50px;
+        width: 50px;
         border-radius: 150px;
     }
 }

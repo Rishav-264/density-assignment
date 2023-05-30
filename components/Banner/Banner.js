@@ -17,7 +17,7 @@ export const Banner= (props) => {
       <div className="bg-violet-100 justify-left items-center flex pl-20 py-10 h-80vh rounded-lg m-4 mt-0">
         <div className="basis-1/2">
             <motion.div 
-                className='semi-circle-top rotate-180 bg-red-300 relative bottom-[-3px] left-[800px]'
+                className='semi-circle-top rotate-180 bg-red-300 relative 1536:bottom-[-3px] mac:bottom-[-38px] 1536:left-[800px] mac:left-[700px]'
                 initial={{scale: 0.5, opacity: 0}}
                 whileInView={{scale: 1, opacity: 1}}
                 transition={{
@@ -55,7 +55,7 @@ export const Banner= (props) => {
                 </span>
             </div>
             <motion.div 
-                className='semi-circle-bottom rotate-180 bg-red-400 relative bottom-[3px] left-[450px]'
+                className='semi-circle-bottom rotate-180 bg-red-400 relative 1536:bottom-[3px] mac:bottom-[38px] left-[450px]'
                 initial={{scale: 0.5, opacity: 0}}
                 whileInView={{scale: 1, opacity: 1}}
                 transition={{
@@ -77,8 +77,8 @@ export const Banner= (props) => {
                 loop={true} 
                 initialSegment={[20, 110]}
                 style={{
-                    height: "600px",
-                    width: "600px"
+                    height: "500px",
+                    width: "500px"
                 }}
             />
         </div>
