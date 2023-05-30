@@ -13,4 +13,19 @@
         width: 100px;
         border-radius: 150px 150px 0 0;
     }
+    .circle-big{
+        height: 200px;
+        width: 200px;
+        border-radius: 150px;
+    }
+    .circle-medium{
+        height: 150px;
+        width: 150px;
+        border-radius: 150px;
+    }
+    .circle-small{
+        height: 100px;
+        width: 100px;
+        border-radius: 150px;
+    }
 }

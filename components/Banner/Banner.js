@@ -1,15 +1,23 @@
 "use client"
 
+import {useRef} from 'react';
+
 import {motion} from 'framer-motion'
 import { BsApple } from 'react-icons/bs';
 import { AiTwotoneStar } from 'react-icons/ai';
 
+import animationData from '../../assets/phoneAnimation.json';
+import Lottie from 'lottie-react';
+
 export const Banner= (props) => {
+
+    const animationRef = useRef(); 
+
     return(
       <div className="bg-violet-100 justify-left items-center flex pl-20 py-10 h-80vh rounded-lg m-4 mt-0">
         <div className="basis-1/2">
             <motion.div 
-                className='semi-circle-top rotate-180 bg-red-300 relative bottom-[-2px] left-[800px]'
+                className='semi-circle-top rotate-180 bg-red-300 relative bottom-[-3px] left-[800px]'
                 initial={{scale: 0.5, opacity: 0}}
                 whileInView={{scale: 1, opacity: 1}}
                 transition={{
@@ -47,7 +55,7 @@ export const Banner= (props) => {
                 </span>
             </div>
             <motion.div 
-                className='semi-circle-bottom rotate-180 bg-red-400 relative bottom-[2px] left-[450px]'
+                className='semi-circle-bottom rotate-180 bg-red-400 relative bottom-[3px] left-[450px]'
                 initial={{scale: 0.5, opacity: 0}}
                 whileInView={{scale: 1, opacity: 1}}
                 transition={{
@@ -62,8 +70,17 @@ export const Banner= (props) => {
                   }}
             ></motion.div>
         </div>
-        <div className="basis-1/2 flex">
-
+        <div className="basis-1/2 flex justify-end">
+            <Lottie 
+                animationData={animationData} 
+                lottieRef={animationRef}
+                loop={true} 
+                initialSegment={[20, 110]}
+                style={{
+                    height: "600px",
+                    width: "600px"
+                }}
+            />
         </div>
       </div>
      )
